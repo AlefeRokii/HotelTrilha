@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Home</title>
+  <style>
+    .availability-form {
+      margin-top: -50px;
+      z-index: 2;
+      position: relative;
+    }
+
+    @media screen and (max-width: 575px) {
+      .availability-form {
+        margin-top: 25px;
+        padding: 0 35px;
+      } 
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <main>
+  <!-- Header (simplified) -->
+    <header>
+      <nav>
+          <div class="wrapper">
+            <div class="logo"><a href="#">TRILHA HOTEL!</a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+              <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+              <li><a href="#">Home</a></li>
+              <li><a href="room.html">Quartos</a></li>
+              <li><a href="#">Sobre</a></li>
+            </ul>
+                
+    </header>
+    <div class="banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="ban-image" src="imagem1.png">
+            </div>
+      </div>
+    </div>
+    <section class="booking-section">
+      <div class="booking-form">
+          <form>
+              <div class="form-container">
+          <h2>Verificar Disponibilidade</h2>
+          <div class="form-group">
+              <label for="checkin">Data de Check-in:</label>
+              <input class="formulario" type="date" id="checkin">
+          </div>
+          <div class="form-group">
+              <label for="checkout">Data de Check-out:</label>
+              <input class="formulario" type="date" id="checkout">
+          </div>
+          <div class="form-group">
+              <label for="adults">Número de Adultos:</label>
+              <input class="formulario" type="number" id="adults" min="1" value="1">
+          </div>
+          <div class="form-group">
+              <label for="children">Número de Crianças:</label>
+              <input class="formulario" type="number" id="children" min="0" value="0">
+          </div>
+          <div class="form-group">
+              <button onclick="checkAvailability()">Verificar Disponibilidade</button>
+          </div>
+      </div>
+          </form>
+      </div>
+  </section>
+  <section class="rooms-section">
+    <h2 class="textoquarto">Nossos Quartos</h2>
+    <div class="quartos">
+      <div class="room">
+        <img class ="room-image" src="room4.png" alt="Room 1">
+        <h2>Deluxe Room</h2>
+        <h4 class="price">600R$ por noite</h4>
+        <div class="features">
+          <h3 class="mb-1">Features</h3>
+          <span class="badge">banheiro</span>
+          <span class="badge">cama de casal</span>
+        </div>
+        <div class="facilities">
+          <h3 class="mb-1">Facilities</h3>
+          <span class="badge">ar-condicionado</span>
+          <span class="badge">Wi-Fi</span>
+        </div>
+        <div class="guests">
+          <h3 class="mb-1">Guests</h3>
+          <span class="badge">2 Adultos</span>
+          <span class="badge">1 Criança</span>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-primary">Agende Agora</button>
+          <a href="room_details.html" class="btn btn-secondary">Mais Detalhes</a>
+        </div>
+      </div>
+      <div class="room">
+        <img class ="room-image" src="quarto2 (2).png" alt="Room 1">
+        <h2>Luxury Room</h2>
+        <h4 class="price">1200R$ por noite</h4>
+        <div class="features">
+          <h3 class="mb-1">Features</h3>
+          <span class="badge">Suite Premium</span>
+          <span class="badge">Cama King-Size</span>
+        </div>
+        <div class="facilities">
+          <h3 class="mb-1">Facilities</h3>
+          <span class="badge">Ar-condicionado</span>
+          <span class="badge">Wi-Fi</span>
+        </div>
+        <div class="guests">
+          <h3 class="mb-1">Guests</h3>
+          <span class="badge">2 Adultos</span>
+          <span class="badge">3 Crianças</span>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-primary">Agende Agora</button>
+          <a href="room_details.html" class="btn btn-secondary">Mais Detalhes</a>
+        </div>
+      </div>
+      <div class="room">
+        <img class ="room-image" src="quarto2 (1).png" alt="Room 1">
+        <h2>Supreme Deluxe Room</h2>
+        <h4 class="price">2400R$ por noite</h4>
+        <div class="features">
+          <h3 class="mb-1">Qualidades</h3>
+          <span class="badge">Suite Presidencial</span>
+          <span class="badge">Cama Queen-Size</span>
+        </div>
+        <div class="facilities">
+          <h3 class="mb-1">Acompanha</h3>
+          <span class="badge">Ar-Condicionado</span>
+          <span class="badge">Banheira </span>
+        </div>
+        <div class="guests">
+          <h3 class="mb-1">Hospedes</h3>
+          <span class="badge">4 Adultos</span>
+          <span class="badge">8 Crianças</span>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-primary">Agende Agora</button>
+          <a href="room.html" class="btn btn-secondary">Mais detalhes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    </section>
+    <section class="map-and-contact">
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8105928317163!2d72.85390927444063!3d19.02328628669462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce9e65d7c8cf%3A0x5e3c3793c27d8a71!2sVeermata%20Jijabai%20Technological%20Institute%20(VJTI)!5e0!3m2!1sen!2sin!4v1613558654215!5m2!1sen!2sin" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="contact-info">
+        <h3>Nos Siga!</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fab fa-facebook-f">Facebook</i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram">Instagram</i>
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <i class="fab fa-twitter">Twitter</i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank">
+            <i class="fab fa-linkedin-in">Linkedin</i>
+          </a>
+    </section> 
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TRILHA HOTEL!</h3>
+        <p>Bem-vindo ao nosso hotel, onde conforto, sofisticação e hospitalidade se encontram para oferecer a você uma experiência inesquecível. Seja para férias em família, uma escapada romântica ou uma viagem a negócios, temos tudo o que você precisa para relaxar e aproveitar cada momento.</p>
+      </div>
+    </div>
+  </footer>
+ </main>
+</body>
+</html>
